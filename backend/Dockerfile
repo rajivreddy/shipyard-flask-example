@@ -1,4 +1,4 @@
-FROM python:3.8.8-alpine3.13
+FROM python:3.9.12-alpine3.15
 
 WORKDIR /srv
 
@@ -34,7 +34,7 @@ USER app
 
 # Install Python dependencies
 ADD pyproject.toml poetry.lock ./
-RUN poetry install
+RUN poetry install 
 
 # Add the project
 # NOTE Run the install again to install the project
